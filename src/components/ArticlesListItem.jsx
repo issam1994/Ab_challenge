@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Home(){
-    return(
+export default function() {
+    return (
         <div className="">
-            This is Home
+            List Item
         </div>
     )
 }

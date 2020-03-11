@@ -14,6 +14,8 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
     plugins: [
       require('tailwindcss'),
       require('autoprefixer'),
+      // purgecss will run only when building for production
+      // to get rid of all unused css
       ...process.env.NODE_ENV === 'production'
         ? [purgecss]
         : []

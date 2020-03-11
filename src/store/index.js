@@ -1,8 +1,8 @@
 import {createStore} from 'easy-peasy'
-import auth from './models/auth'
+import articles from './models/articles'
 
 const rootModel = {
-    auth
+    articles
 }
 const store = createStore(rootModel);
 
