@@ -6,7 +6,7 @@ import Spinner from './components/Spinner'
 
 function App() {
   return (
-    <div className="text-gray-900 min-h-screen bg-gray-200">
+    <div className="text-gray-900 min-h-screen bg-app-gray-light">
       <div className="container mx-auto py-16">
         <SearchBar />
         <ArticlesList />

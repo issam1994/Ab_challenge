@@ -6,6 +6,8 @@ import * as serviceWorker from './serviceWorker';
 import './styles/index.css'
 //transitions
 import './styles/transitions.css'
+// extra
+import './styles/extracss.css'
 //store
 import {StoreProvider} from 'easy-peasy'
 import store from './store'
