@@ -8,6 +8,8 @@ import './styles/index.css'
 import './styles/transitions.css'
 // extra
 import './styles/extracss.css'
+//spinner css
+import './styles/spinner.css'
 //store
 import {StoreProvider} from 'easy-peasy'
 import store from './store'

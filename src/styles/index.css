@@ -11353,7 +11353,33 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-/* extending tailwind */
+/* specifics extracted from figma*/
+
+.search-bar-container {
+  padding: 15px 0;
+}
+
+.article-list-item {
+  margin: 20px 0;
+}
+
+.article-list-item-title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  color: #484987;
+}
+
+.article-list-item-paragraph {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  color: #484987;
+}
 
 @media (min-width: 640px) {
   .sm\:sr-only {
