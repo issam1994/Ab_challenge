@@ -21,8 +21,7 @@ export default function () {
     const stopListeningToScrolling = () => { document.removeEventListener('scroll', handleScroll) }
     //on mounted, fetch data & start listening to scroll event
     useEffect(() => {
-        fetchItems()
-        listenToScrolling()
+        fetchItems(listenToScrolling)
         //when comp unmounts, we remove its event listener
         return () => {
             stopListeningToScrolling()
