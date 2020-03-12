@@ -5,12 +5,12 @@ import { hasScrolledToTheEndOfList } from '../utils'
 
 export default function () {
     // store data
-    const items = useStoreState(state => state.articles.items)
+    const items = useStoreState(state => state.articles.getItems)
     const fetchItems = useStoreActions(actions => actions.articles.fetchItems)
-    const isFetching = useStoreState(state => state.articles.isFetching)
+    const reset = useStoreActions(actions => actions.articles.reset)
     //scroll event handlers
     const handleScroll = () => {
-        if (!isFetching && hasScrolledToTheEndOfList()) {
+        if (hasScrolledToTheEndOfList()) {
             console.log("has reached the end of list")
             stopListeningToScrolling()
             //fetchItems accepts a callback
@@ -23,6 +23,11 @@ export default function () {
     useEffect(() => {
         fetchItems()
         listenToScrolling()
+        //when comp unmounts, we remove its event listener
+        return () => {
+            stopListeningToScrolling()
+            reset()
+        }
     }, [fetchItems])
     return (
         <div className="">

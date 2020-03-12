@@ -23,7 +23,7 @@ export default function({item}) {
                 {/* lire plus */}
                 <div className="mt-auto flex items-center">
                     <div className="app-lire-plus-line"></div>
-                <a className="font-semibold text-app-indigo" href={html_url} target="_blank">Lire plus</a>
+                <a className="font-semibold text-app-indigo" rel="noopener noreferrer" href={html_url} target="_blank">Lire plus</a>
                 </div>
             </div>
         </div>

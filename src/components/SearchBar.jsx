@@ -1,7 +1,22 @@
-import React from 'react'
-// import { mdiMagnify as searchIcon } from '@mdi/js'
+import React, {useState} from 'react'
+import { useStoreActions } from 'easy-peasy'
 
 export default function () {
+    const [timer, setTimer] = useState(null)
+    const fetchResult = useStoreActions(actions => actions.articles.fetchResult)
+    const setSearchQuery = useStoreActions(actions => actions.articles.setSearchQuery)
+    const setIsFetching = useStoreActions(actions => actions.articles.setIsFetching)
+    const handleChange = (e) => {
+        const query = e.target.value
+        setSearchQuery(query)
+        //if the user typed again before the timer is done, we clear the timer to reset it
+        clearTimeout(timer)
+        //fetch result only after one second of no activity
+        setTimer((timer) => {
+            return setTimeout(fetchResult, 1000)
+        })
+        setIsFetching(true)
+    }
     return (
         <div className="flex items-center justify-end py-6">
             <div className="flex items-center bg-white rounded-full overflow-hidden p-3 shadow-sm">
@@ -11,7 +26,7 @@ export default function () {
                 </svg>
                 {/* end search icon  */}
                 {/* the input */}
-                <input type="text" name="search" id="search" placeholder="Recherche par mot cle" />
+                <input onChange={handleChange} type="text" name="search" id="search" placeholder="Recherche par mot cle" />
                 {/* end input  */}
             </div>
         </div>
