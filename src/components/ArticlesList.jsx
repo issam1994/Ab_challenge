@@ -4,7 +4,7 @@ import { useStoreState, useStoreActions } from 'easy-peasy'
 import { hasScrolledToTheEndOfList } from '../utils'
 
 export default function () {
-    // store stuff
+    // store data
     const items = useStoreState(state => state.articles.items)
     const fetchItems = useStoreActions(actions => actions.articles.fetchItems)
     const isFetching = useStoreState(state => state.articles.isFetching)
@@ -19,7 +19,7 @@ export default function () {
     }
     const listenToScrolling = () => { document.addEventListener('scroll', handleScroll) }
     const stopListeningToScrolling = () => { document.removeEventListener('scroll', handleScroll) }
-    //on mounted, fetch data
+    //on mounted, fetch data & start listening to scroll event
     useEffect(() => {
         fetchItems()
         listenToScrolling()
