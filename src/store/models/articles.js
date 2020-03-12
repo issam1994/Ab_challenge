@@ -30,7 +30,6 @@ const articlesModel = {
             const {currentPage} = helpers.getState()
             const trendingUrl = `/search/repositories?q=created:>2020-01-01&sort=stars&order=desc&page=${currentPage + 1}`
             const { items } = (await axios.get(trendingUrl)).data
-            console.log("fetched items: ", items)
             actions.updateItems(items)
             actions.incrementCurrentPage()
             actions.setIsFetching(false)
@@ -48,7 +47,6 @@ const articlesModel = {
             actions.updateSearchResult([])
             const searchUrl = `/search/repositories?q=${searchQuery}&sort=stars&order=desc&page=1`
             const { items } = (await axios.get(searchUrl)).data
-            console.log("fetched result: ", items)
             actions.updateSearchResult(items)
             actions.setIsFetching(false)
             //the callback is going to be about re attaching the scroll listener

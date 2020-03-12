@@ -11,7 +11,6 @@ export default function () {
     //scroll event handlers
     const handleScroll = () => {
         if (hasScrolledToTheEndOfList()) {
-            console.log("has reached the end of list")
             stopListeningToScrolling()
             //fetchItems accepts a callback
             fetchItems(listenToScrolling)

@@ -3,6 +3,5 @@ export const hasScrolledToTheEndOfList = function () {
     let visible = document.documentElement.clientHeight
     let pageHeight = document.documentElement.scrollHeight
     let reachedBottom = visible + scrollY + 5 >= pageHeight
-    console.log("scrollY:", scrollY, " visible:", visible, "pageHeight:", pageHeight, "reachedBottom? :", reachedBottom )
     return reachedBottom || pageHeight < visible
 }
