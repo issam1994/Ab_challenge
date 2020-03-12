@@ -2,7 +2,6 @@
 @tailwind base;
 @tailwind components;
 /* purgecss end ignore */
-
 @tailwind utilities;
 
 /* setting font  */
@@ -11,15 +10,26 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
-
+/* .. */
+.app-tag {
+  background: linear-gradient(343.93deg, #4a9bb2 0%, #48337b 100%);
+}
+.app-lire-plus-line {
+    content: "";
+    background-color: #4DF0E0;
+    height: 3px;
+    width: 19px;
+    margin-right: 0.25rem;
+    border-radius: 20px;
+}
 /* specifics extracted from figma*/
-.search-bar-container {
+.app-search-bar-container {
     padding: 15px 0;
 }
-.article-list-item {
+.app-article-list-item {
     margin: 20px 0;
 }
-.article-list-item-title {
+.app-article-list-item-title {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: bold;
@@ -28,7 +38,7 @@ body {
   color: #484987;
 }
 
-.article-list-item-paragraph {
+.app-article-list-item-paragraph {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: bold;

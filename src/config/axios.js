@@ -5,7 +5,8 @@ import keys from './keys'
 axios.defaults.baseURL = keys.apiUrl
 
 //for debugging
-//intercept api calls to attach the token automatically
+
+//intercept api calls
 axios.interceptors.request.use((config) => {
     // console.log("a going request: ", config)
     return config

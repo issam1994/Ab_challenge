@@ -4,10 +4,8 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 //tailwindcss
 import './styles/index.css'
-//transitions
+//transitions for animations
 import './styles/transitions.css'
-// extra
-import './styles/extracss.css'
 //spinner css
 import './styles/spinner.css'
 //store

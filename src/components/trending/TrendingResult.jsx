@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
-import ArticlesListItem from './ArticlesListItem'
+import ArticlesList from '../articles/ArticlesList'
 import { useStoreState, useStoreActions } from 'easy-peasy'
-import { hasScrolledToTheEndOfList } from '../utils'
+import { hasScrolledToTheEndOfList } from '../../utils'
 
 export default function () {
     // store data
@@ -27,11 +27,5 @@ export default function () {
             reset()
         }
     }, [fetchItems])
-    return (
-        <div className="">
-            {
-                items.map((item, i) => <ArticlesListItem item={item} key={item.id + i} />)
-            }
-        </div>
-    )
+    return (<ArticlesList items={items} />)
 }

@@ -1,20 +1,8 @@
 import React from 'react'
-
-import SearchBar from './components/SearchBar'
-import ArticlesList from './components/ArticlesList'
-import SearchResult from './components/searchResult'
+import SearchBar from './components/search/SearchBar'
 import Spinner from './components/Spinner'
+import Content from './components/Content'
 
-import {useStoreState} from 'easy-peasy'
-
-const Content = () => {
-  const searchQuery = useStoreState(state => state.articles.searchQuery)
-  if(searchQuery === ""){
-    return <ArticlesList />
-  } else {
-    return <SearchResult />
-  }
-}
 
 function App() {
   return (
