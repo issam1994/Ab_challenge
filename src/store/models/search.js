@@ -1,7 +1,6 @@
 import {action, thunk } from 'easy-peasy'
 import axios from 'axios'
 
-// const searchUrl = ""
 const searchModel = {
     //state
     searchQuery: '',

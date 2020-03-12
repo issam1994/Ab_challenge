@@ -1,11 +1,11 @@
 import React from 'react'
 import { useStoreState } from 'easy-peasy'
-import ArticlesList from '../articles/ArticlesList'
+import ReposList from '../repos/ReposList'
 
 
 export default function () {
     // store data
     const searchResult = useStoreState(state => state.search.searchResult)
 
-    return (<ArticlesList items={searchResult} />)
+    return (<ReposList items={searchResult} />)
 }

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import ArticlesList from '../articles/ArticlesList'
+import ReposList from '../repos/ReposList'
 import { useStoreState, useStoreActions } from 'easy-peasy'
 import { hasScrolledToTheEndOfList } from '../../utils'
 
@@ -27,5 +27,5 @@ export default function () {
             reset()
         }
     }, [])
-    return (<ArticlesList items={items} />)
+    return (<ReposList items={items} />)
 }
