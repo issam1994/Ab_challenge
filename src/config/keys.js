@@ -1,4 +1,4 @@
 const keys = {
-    apiUrl: "http://localhost:5000/api",
+    apiUrl: "https://api.github.com",
 }
 export default keys

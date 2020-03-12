@@ -1,6 +1,11 @@
 import React from 'react'
+import {useStoreState} from 'easy-peasy'
 
 export default function () {
+    const isFetching = useStoreState(state => state.articles.isFetching)
+    if(!isFetching){
+        return null
+    }
     return (
         <div className="flex">
             <div className="sk-fading-circle">
