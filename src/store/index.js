@@ -1,8 +1,10 @@
 import {createStore} from 'easy-peasy'
-import articles from './models/articles'
+import trending from './models/trending'
+import search from './models/search'
 
 const rootModel = {
-    articles
+    trending,
+    search
 }
 const store = createStore(rootModel);
 

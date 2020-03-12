@@ -5,9 +5,9 @@ import { hasScrolledToTheEndOfList } from '../../utils'
 
 export default function () {
     // store data
-    const items = useStoreState(state => state.articles.getItems)
-    const fetchItems = useStoreActions(actions => actions.articles.fetchItems)
-    const reset = useStoreActions(actions => actions.articles.reset)
+    const items = useStoreState(state => state.trending.items)
+    const fetchItems = useStoreActions(actions => actions.trending.fetchItems)
+    const reset = useStoreActions(actions => actions.trending.reset)
     //scroll event handlers
     const handleScroll = () => {
         if (hasScrolledToTheEndOfList()) {
@@ -26,6 +26,6 @@ export default function () {
             stopListeningToScrolling()
             reset()
         }
-    }, [fetchItems])
+    }, [])
     return (<ArticlesList items={items} />)
 }

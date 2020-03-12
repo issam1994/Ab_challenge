@@ -3,16 +3,16 @@ import { useStoreActions } from 'easy-peasy'
 
 export default function () {
     const [timer, setTimer] = useState(null)
-    const fetchResult = useStoreActions(actions => actions.articles.fetchResult)
-    const setSearchQuery = useStoreActions(actions => actions.articles.setSearchQuery)
-    const setIsFetching = useStoreActions(actions => actions.articles.setIsFetching)
+    const fetchResult = useStoreActions(actions => actions.search.fetchResult)
+    const setSearchQuery = useStoreActions(actions => actions.search.setSearchQuery)
+    const setIsFetching = useStoreActions(actions => actions.trending.setIsFetching)
     const handleChange = (e) => {
         const query = e.target.value
         setSearchQuery(query)
         //if the user typed again before the timer is done, we clear the timer to reset it
         clearTimeout(timer)
         //fetch result only after one second of no activity
-        setTimer((timer) => {
+        setTimer(() => {
             return setTimeout(fetchResult, 1000)
         })
         setIsFetching(true)

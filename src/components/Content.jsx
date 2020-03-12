@@ -5,7 +5,7 @@ import SearchResult from './search/SearchResult'
 import { useStoreState } from 'easy-peasy'
 
 export default function () {
-    const searchQuery = useStoreState(state => state.articles.searchQuery)
+    const searchQuery = useStoreState(state => state.search.searchQuery)
     if (searchQuery === "") {
         return <TrendingResult />
     } else {

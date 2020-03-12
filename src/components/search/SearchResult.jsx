@@ -5,7 +5,7 @@ import ArticlesList from '../articles/ArticlesList'
 
 export default function () {
     // store data
-    const searchResult = useStoreState(state => state.articles.searchResult)
+    const searchResult = useStoreState(state => state.search.searchResult)
 
     return (<ArticlesList items={searchResult} />)
 }

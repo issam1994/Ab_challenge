@@ -2,7 +2,7 @@ import React from 'react'
 import {useStoreState} from 'easy-peasy'
 
 export default function () {
-    const isFetching = useStoreState(state => state.articles.isFetching)
+    const isFetching = useStoreState(state => state.trending.isFetching)
     if(!isFetching){
         return null
     }
