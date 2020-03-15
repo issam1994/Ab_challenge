@@ -8,8 +8,8 @@ export default function ({items = []}) {
             <TransitionGroup>
                 {
                     items.map((item, i) => (
-                        <CSSTransition classNames="scale" timeout={200} key={i}>
-                            <ReposListItem item={item} index={i} key={item.id + i} />
+                        <CSSTransition classNames="scale" timeout={300} key={item.id + i}>
+                            <ReposListItem item={item} index={i} />
                         </CSSTransition>
                     ))
                 }
