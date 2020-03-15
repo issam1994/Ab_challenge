@@ -8,6 +8,9 @@ const searchModel = {
     //actions
     setSearchQuery: action((state, query) => {state.searchQuery = query}),
     updateSearchResult: action((state, fetchedData) => { state.searchResult = fetchedData }),
+    reset: action((state) => {
+        state.searchResult = []
+    }),
     //thunks
     fetchResult: thunk(async (actions, callback, helpers) => {
         try {
