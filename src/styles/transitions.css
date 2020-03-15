@@ -1,25 +1,25 @@
-.fade-appear {
+.scale-appear {
   opacity: 0;
-  transform: scale(0.8);
+  transform: scale(0.7);
 }
-.fade-appear-active {
+.scale-appear-active {
   opacity: 1;
   transform: scale(1);
   transition: all 200ms;
 }
-.fade-enter {
+.scale-enter {
   opacity: 0;
-  transform: scale(0.8);
+  transform: scale(0.7);
 }
-.fade-enter-active {
+.scale-enter-active {
   opacity: 1;
   transform: scale(1);
   transition: all 200ms;
 }
-.fade-exit {
+.scale-exit {
   opacity: 1;
 }
-.fade-exit-active {
+.scale-exit-active {
   opacity: 0;
   transition: all 200ms;
 }

@@ -1,4 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## attention
+when the dev server starts and a window opens automatically in your browser, relaod it manually. That's a bug caused by concurrently & postcss watching the styles.
 
 ## Available Scripts
 
